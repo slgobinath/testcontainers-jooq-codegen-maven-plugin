@@ -33,7 +33,7 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.testcontainers</groupId>
+                <groupId>io.github.slgobinath</groupId>
                 <artifactId>testcontainers-jooq-codegen-maven-plugin</artifactId>
                 <version>${testcontainers-jooq-codegen-maven-plugin.version}</version>
                 <dependencies>
