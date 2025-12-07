@@ -1,4 +1,4 @@
-name: Publish package to the Maven Central Repository
+name: Publish package to GitHub Packages
 
 on:
   release:
@@ -7,6 +7,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v4
       - name: Set up Java
@@ -15,11 +18,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Publish package
+        run: ./mvnw -Prelease deploy
         env:
-          JRELEASER_NEXUS2_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          JRELEASER_NEXUS2_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-          JRELEASER_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          JRELEASER_GPG_SECRET_KEY: ${{ secrets.GPG_SECRET_KEY }}
-          JRELEASER_GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
-          JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./mvnw -Prelease deploy jreleaser:deploy -DaltDeploymentRepository=local::file:./target/staging-deploy
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
