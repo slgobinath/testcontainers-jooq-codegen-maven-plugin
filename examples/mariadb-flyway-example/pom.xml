@@ -19,12 +19,12 @@
         <mariadb-java-client.version>3.1.2</mariadb-java-client.version>
     </properties>
 
-    <repositories>
-        <repository>
+    <pluginRepositories>
+        <pluginRepository>
             <id>github</id>
             <url>https://maven.pkg.github.com/slgobinath/testcontainers-jooq-codegen-maven-plugin</url>
-        </repository>
-    </repositories>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
