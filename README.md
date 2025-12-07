@@ -3,8 +3,36 @@
 The `testcontainers-jooq-codegen-maven-plugin` simplifies the jOOQ code generation
 by using [Testcontainers](https://www.testcontainers.org/) and applying database migrations.
 
-[![Build](https://github.com/testcontainers/testcontainers-jooq-codegen-maven-plugin/actions/workflows/build.yml/badge.svg)](https://github.com/testcontainers/testcontainers-jooq-codegen-maven-plugin/actions/workflows/build.yml)
-![Maven Central](https://img.shields.io/maven-central/v/org.testcontainers/testcontainers-jooq-codegen-maven-plugin?label=latest-version)
+[![Build](https://github.com/slgobinath/testcontainers-jooq-codegen-maven-plugin/actions/workflows/build.yml/badge.svg)](https://github.com/slgobinath/testcontainers-jooq-codegen-maven-plugin/actions/workflows/build.yml)
+
+## About This Fork
+
+This is a fork of [testcontainers-jooq-codegen-maven-plugin](https://github.com/testcontainers/testcontainers-jooq-codegen-maven-plugin). The upstream repository has not been updated for over a year, and pull requests remain unmerged. This has led to dependency conflicts with newer versions of jOOQ and Docker breaking the plugin execution.
+
+As an active user of this plugin, I forked it to keep the project up to date with the latest dependencies. The `groupId` and `artifactId` are kept the same as the original to minimize changes in existing projects. The only additional requirement is adding this repository to your `pom.xml`:
+
+```xml
+<repositories>
+    <repository>
+        <id>github</id>
+        <url>https://maven.pkg.github.com/slgobinath/testcontainers-jooq-codegen-maven-plugin</url>
+    </repository>
+</repositories>
+```
+
+Note: GitHub Packages requires authentication. Add the following to your `~/.m2/settings.xml`:
+
+```xml
+<servers>
+    <server>
+        <id>github</id>
+        <username>YOUR_GITHUB_USERNAME</username>
+        <password>YOUR_GITHUB_TOKEN</password>
+    </server>
+</servers>
+```
+
+You can generate a personal access token with `read:packages` scope at https://github.com/settings/tokens.
 
 ## Summary
 
