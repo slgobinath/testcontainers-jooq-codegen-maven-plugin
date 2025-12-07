@@ -9,7 +9,7 @@ by using [Testcontainers](https://www.testcontainers.org/) and applying database
 
 This is a fork of [testcontainers-jooq-codegen-maven-plugin](https://github.com/testcontainers/testcontainers-jooq-codegen-maven-plugin). The upstream repository has not been updated for over a year, and pull requests remain unmerged. This has led to dependency conflicts with newer versions of jOOQ and Docker breaking the plugin execution.
 
-As an active user of this plugin, I forked it to keep the project up to date with the latest dependencies. The `groupId` and `artifactId` are kept the same as the original to minimize changes in existing projects. The only additional requirement is adding this repository to your `pom.xml`:
+As an active user of this plugin, I forked it to keep the project up to date with the latest dependencies. The `groupId` has been changed to `io.github.slgobinath` to avoid conflicts with the original package. To use this fork, add the GitHub Packages repository to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -196,7 +196,7 @@ Example with `PostgreSQL` and minimal configuration with `Flyway` and `JOOQ`
 ```xml
 
 <plugin>
-    <groupId>org.testcontainers</groupId>
+    <groupId>io.github.slgobinath</groupId>
     <artifactId>testcontainers-jooq-codegen-maven-plugin</artifactId>
     <version>${testcontainers-jooq-codegen-maven-plugin.version}</version>
     <dependencies>
