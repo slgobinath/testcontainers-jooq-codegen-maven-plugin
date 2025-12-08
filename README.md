@@ -12,12 +12,12 @@ This is a fork of [testcontainers-jooq-codegen-maven-plugin](https://github.com/
 As an active user of this plugin, I forked it to keep the project up to date with the latest dependencies. The `groupId` has been changed to `io.github.slgobinath` to avoid conflicts with the original package. To use this fork, add the GitHub Packages repository to your `pom.xml`:
 
 ```xml
-<repositories>
-    <repository>
+<pluginRepositories>
+    <pluginRepository>
         <id>github</id>
         <url>https://maven.pkg.github.com/slgobinath/testcontainers-jooq-codegen-maven-plugin</url>
-    </repository>
-</repositories>
+    </pluginRepository>
+</pluginRepositories>
 ```
 
 Note: GitHub Packages requires authentication. Add the following to your `~/.m2/settings.xml`:

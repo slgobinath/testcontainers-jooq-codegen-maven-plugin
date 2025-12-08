@@ -19,12 +19,12 @@
         <postgresql.version>42.6.0</postgresql.version>
     </properties>
 
-    <repositories>
-        <repository>
+    <pluginRepositories>
+        <pluginRepository>
             <id>github</id>
             <url>https://maven.pkg.github.com/slgobinath/testcontainers-jooq-codegen-maven-plugin</url>
-        </repository>
-    </repositories>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
