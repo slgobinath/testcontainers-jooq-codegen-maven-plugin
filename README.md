@@ -20,6 +20,30 @@ As an active user of this plugin, I forked it to keep the project up to date wit
 </pluginRepositories>
 ```
 
+### Migration from Upstream
+
+To migrate from the upstream repository, update your plugin configuration:
+
+**From:**
+```xml
+<plugin>
+    <groupId>org.testcontainers</groupId>
+    <artifactId>testcontainers-jooq-codegen-maven-plugin</artifactId>
+    <version>0.0.4</version>
+    <!-- configuration -->
+</plugin>
+```
+
+**To:**
+```xml
+<plugin>
+    <groupId>io.github.slgobinath</groupId>
+    <artifactId>testcontainers-jooq-codegen-maven-plugin</artifactId>
+    <version>0.0.5</version>
+    <!-- configuration -->
+</plugin>
+```
+
 Note: GitHub Packages requires authentication. Add the following to your `~/.m2/settings.xml`:
 
 ```xml
