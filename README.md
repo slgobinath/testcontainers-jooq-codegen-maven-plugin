@@ -30,7 +30,7 @@ To migrate from the upstream repository, update your plugin configuration:
     <groupId>org.testcontainers</groupId>
     <artifactId>testcontainers-jooq-codegen-maven-plugin</artifactId>
     <version>0.0.4</version>
-    ....
+    <!-- configuration -->
 </plugin>
 ```
 
@@ -40,7 +40,7 @@ To migrate from the upstream repository, update your plugin configuration:
     <groupId>io.github.slgobinath</groupId>
     <artifactId>testcontainers-jooq-codegen-maven-plugin</artifactId>
     <version>0.0.5</version>
-    ....
+    <!-- configuration -->
 </plugin>
 ```
 
